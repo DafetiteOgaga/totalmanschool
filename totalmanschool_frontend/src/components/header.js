@@ -33,12 +33,12 @@ function Header() {
 									${isMobile?'menu-show':'main-menu'}
 									${isMenuOpen?'down':'up'}
 									`}>
-						<li className='active'>
+						{/* <li className='active'>
 							<Link
 								to={"/"}
 								>Home
 							</Link>
-						</li>
+						</li> */}
 						<li className="has-submenu"
 						onMouseEnter={()=>setIsSubMenuOpen(prev=>!prev)}
 						onMouseLeave={()=>setIsSubMenuOpen(prev=>!prev)}
@@ -69,18 +69,17 @@ function Header() {
 								>Activities
 							</Link>
 						</li>
-						<li>
+						<li className='active'>
 							<Link
 								to={"contact-us"}>
-									Contact:
-									{width}px
+									Contact
 							</Link>
 						</li>
-						{/* <li>
+						<li>
 							<Link>
 									{width}px
 							</Link>
-						</li> */}
+						</li>
 					</ul>
 				</nav>
 		</header>

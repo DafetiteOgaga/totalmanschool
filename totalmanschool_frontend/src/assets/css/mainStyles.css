@@ -367,33 +367,6 @@ section.features .col-4 {
   margin-top: 15px;
 }
 
-/* Base hidden */
-.menu-show {
-  margin-top: 15px;
-  overflow: hidden;
-  transform: scaleY(0);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-/* DOWN version (default dropdown) */
-.menu-show.down {
-  transform-origin: top;
-  transform: scaleY(1);
-  opacity: 1;
-}
-/* UP version */
-.menu-show.up {
-  transform-origin: bottom;
-  transform: scaleY(0);
-  opacity: 0;
-  /* margin-top: -300px; */
-}
-/* Active (visible) */
-/* .menu-active {
-  transform: scaleY(1);
-  opacity: 1;
-} */
-
 .content-hide p {
   color: #fff;
 }

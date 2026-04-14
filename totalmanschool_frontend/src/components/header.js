@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { schoolName } from '../entry/entry';
 import { AppLogo } from './appLogo';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDevice } from '../context/deviceTypeContext';
 
 function Header() {
@@ -10,11 +10,24 @@ function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const [isSubMenuOpen, setIsSubMenuOpen] = useState(false)
 	const [hasMounted, setHasMounted] = useState(false);
+	const [toNone, setToNone] = useState(true)
 
 	useEffect(() => {
 		setHasMounted(true);
 	}, []);
-	console.log({isMenuOpen, isSubMenuOpen})
+	useEffect(() => {
+		console.log('in effect')
+		if (isMobile&&!isMenuOpen&&!toNone) {
+			console.log('removing ul')
+			const delay = setTimeout(() => {
+				setToNone(true)
+			}, 200);
+		} else if (isMenuOpen&&toNone) {
+			console.log('adding ul')
+			setToNone(false)
+		}
+	}, [isMenuOpen])
+	// console.log({toNone, isMenuOpen, isSubMenuOpen, isMobile})
 	return (
 		<header className="Header main-header clearfix" role="header">
 			<div className={`logo ${width>450?'':'rm-pad'}`}>
@@ -29,9 +42,9 @@ function Header() {
 				onClick={()=>setIsMenuOpen(prev=>!prev)}
 				className={`menu-link ${width<=450?'pad-up':''}`}><i className={`fa ${isMenuOpen?"fa-times":"fa-bars"}`}></i></Link>
 				<nav className={`main-nav ${hasMounted?'':'d-none'}`}>
-					<ul className={`
-									${isMobile?'menu-show':'main-menu'}
+					<ul className={`${isMobile?'menu-show':'main-menu'}
 									${isMenuOpen?'down':'up'}
+									${toNone?'d-none':''}
 									`}>
 						{/* <li className='active'>
 							<Link

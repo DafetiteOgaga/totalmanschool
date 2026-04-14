@@ -527,6 +527,7 @@ section.coming-soon .continer .counter .minutes,
 section.coming-soon .continer .counter .seconds {
   width: 22%;
   height: 140px;
+  padding: 0 5px;
   float: left;
   text-align: center;
   font-size: 48px;

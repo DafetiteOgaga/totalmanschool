@@ -1,0 +1,22 @@
+.dafetite {
+	height: 40px;
+	width: 90px;
+	transition: all 0.3s ease-in-out;
+}
+.dafetite:hover, .dafetite:active {
+	width: 110px;
+	height: 41px;
+}
+.span-dafetite {
+	font-size: 0.9rem;
+	font-style: italic;
+	color: #E5E4E2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.span-dafetite  sup {
+    font-size: 10px;
+    position: relative;
+    top: -0.35em;
+}

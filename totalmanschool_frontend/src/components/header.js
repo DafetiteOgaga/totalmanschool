@@ -44,7 +44,7 @@ function Header() {
 				<nav className={`main-nav ${hasMounted?'':'d-none'}`}>
 					<ul className={`${isMobile?'menu-show':'main-menu'}
 									${isMenuOpen?'down':'up'}
-									${toNone?'d-none':''}
+									${(toNone&&isMobile)?'d-none':''}
 									`}>
 						{/* <li className='active'>
 							<Link

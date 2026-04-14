@@ -5,6 +5,28 @@
 
 /* ----------- MAX WIDTH: 1200px ----------- */
 @media screen and (max-width: 1600px) {
+	/* Base hidden */
+	.menu-show {
+		margin-top: 15px;
+		overflow: hidden;
+		transform-origin: top;
+		transform: scaleY(0);
+		opacity: 0;
+		transition: transform 0.4s ease, opacity 0.4s ease;
+	}
+	/* DOWN version (default dropdown) */
+	.menu-show.down {
+		transform-origin: bottom;
+		transform: scaleY(1);
+		opacity: 1;
+	}
+	/* UP version */
+	.menu-show.up {
+		transform-origin: top;
+		transform: scaleY(0);
+		opacity: 0;
+	}
+  
 	.container {
 		max-width: 1160px !important;
 	}

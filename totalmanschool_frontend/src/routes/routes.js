@@ -3,9 +3,11 @@ import { Routes, Route } from 'react-router-dom';
 import { ProtectedRoute, PublicRoute } from './ProtectedRoute';
 import { Index } from '../components/index';
 import { Home } from '../components/Home';
-import { EducationalServices } from '../components/educationalservices';
-import { ComingSoon } from '../components/comingsoon';
-import { OtherActivities } from '../components/otheractivities';
+import { WhoWeAre } from '../components/whoweare';
+import { WhatWeDo } from '../components/whatwedo';
+// import { WhyChooseUs } from '../components/whychooseus';
+// import { ComingSoon } from '../components/comingsoon';
+// import { OtherActivities } from '../components/whoweare';
 import { ContactUs } from '../components/contactus';
 import { PageNotFound } from '../components/pageNotFound';
 // // import { Contact } from '../components/sections/contact';
@@ -40,9 +42,8 @@ function AppRoutes() {
 
 				{/* Public routes (login and sign up) */}
 				<Route element={<PublicRoute />}>
-					<Route path="who-we-are" element={<EducationalServices />} />
-					<Route path="what-we-do" element={<ComingSoon />} />
-					<Route path="other-activities" element={<OtherActivities />} />
+					<Route path="who-we-are" element={<WhoWeAre />} />
+					<Route path="what-we-do" element={<WhatWeDo />} />
 					<Route path="contact-us" element={<ContactUs />} />
 					<Route path="*" element={<PageNotFound />} />
 				</Route>

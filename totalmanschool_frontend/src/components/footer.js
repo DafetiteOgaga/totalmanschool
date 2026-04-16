@@ -9,12 +9,6 @@ function Footer() {
 				<div className="row">
 					<div className="col-md-12">
 						<DafetiteFooter />
-						{/* <p><i className="fa fa-copyright"></i> Copyright 2020 by Grad School
-						
-						| Design: <Link href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</Link><br/>
-						Distributed By: <Link href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</Link>
-						
-						</p> */}
 					</div>
 				</div>
 			</div>

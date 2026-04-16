@@ -1,9 +1,12 @@
 
 
-const schoolName = {
+const schoolInfo = {
 	the: "the",
 	totalman: "totalman",
-	school: "school"
+	school: "schools",
+	address: "11 Ojamakinwa takuro street, addo, ajah, lagos",
+	mobile: "08138814725",
+	email: "thetotalmancollege@gmail.com",
 }
 
-export { schoolName }
+export { schoolInfo }

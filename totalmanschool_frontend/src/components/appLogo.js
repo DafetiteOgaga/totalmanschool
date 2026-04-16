@@ -1,13 +1,18 @@
-import { schoolName } from "../entry/entry";
+import { schoolInfo } from "../entry/entry";
 import { useDevice } from "../context/deviceTypeContext";
 
 const capitalCase = (str) => {
-	// console.log({str})
 	if (!str) return null
 	const converted = str.trim().toUpperCase()
-	// console.log({converted})
 	return converted
 }
+const styles = {
+	fontFamily: "'Cooper Black', Arial, Helvetica, sans-serif",
+	fontWeight: 700,
+	fontSize: "38px",
+	fill: "#fff",
+}
+
 function AppLogo() {
 	const { labe, width } = useDevice()
 	return (
@@ -21,46 +26,35 @@ function AppLogo() {
 		>
 			{/* Vertical THE */}
 			<text
-				x="42"
-				y="92"
-				transform="rotate(-90 40 90)"
-				style={{
-					fontFamily: "Arial, Helvetica, sans-serif",
-					fontWeight: 700,
-					fontSize: "18px",
-					letterSpacing: "2px",
-					fill: "#f5a425"
+				x="0"
+				y="85"
+				style={{...styles,
 				}}
 			>
-				{capitalCase(schoolName.the)}
+				{capitalCase(schoolInfo.the)}
 			</text>
 
 			{/* TOTALMAN */}
 			<text
-				x="45"
+				x="90"
 				y="85"
 				style={{
-					fontFamily: "Arial, Helvetica, sans-serif",
-					fontWeight: 700,
-					fontSize: "50px",
-					fill: "#fff",
+					...styles,
+					fill: "#f5a425",
 				}}
 			>
-				{capitalCase(schoolName.totalman)}
+				{capitalCase(schoolInfo.totalman)}
 			</text>
 
 			{/* school */}
 			<text
-				x="325"
+				x="330"
 				y="85"
 				style={{
-					fontFamily: "Arial, Helvetica, sans-serif",
-					fontWeight: 700,
-					fontSize: "50px",
-					fill: "#f5a425",
+					...styles,
 				}}
 			>
-				{capitalCase(schoolName.school)}
+				{capitalCase(schoolInfo.school)}
 			</text>
 
 		</svg>

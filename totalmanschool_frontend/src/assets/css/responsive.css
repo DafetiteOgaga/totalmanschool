@@ -1,6 +1,6 @@
-/* =========================
-   RESPONSIVE STYLES (DESKTOP-FIRST FIXED)
-   ========================= */
+/* =======================================
+RESPONSIVE STYLES (DESKTOP-FIRST FIXED)
+======================================= */
 
 
 /* ----------- MAX WIDTH: 1200px ----------- */
@@ -32,6 +32,9 @@
 	}
 	.container._1300 {
 		max-width: 1300px !important;
+	}
+	.container._1000 {
+		max-width: 1000px !important;
 	}
 
 	section.coming-soon .container .counter .days,
@@ -65,9 +68,9 @@
 	.main-menu li {
 		margin-left: 5px !important;
 	}
-	.container._750 {
+	/* .container._750 {
 		max-width: 750px !important;
-	}
+	} */
 	.content-hide {
 		margin-left: -25px;
 		margin-right: -25px;
@@ -190,6 +193,9 @@ screen and (max-height: 300px) {
 
 /* ----------- MAX WIDTH: 767px ----------- */
 @media screen and (max-width: 767px) {
+	#tabs ul li a.pad {
+		padding: 11px;
+	}
 	/* Menu toggle */
 	a.menu-link {
 		float: right;
@@ -225,6 +231,7 @@ screen and (max-height: 300px) {
 		padding: 0;
 		border-top: 1px solid rgba(250,250,250,0.25);
 		background-color: rgba(22,34,57,0.99);
+		z-index: 1024;
 	}
 
 	.menu-show li a {
@@ -240,7 +247,7 @@ screen and (max-height: 300px) {
 
 	.menu-show li:hover a,
 	.menu-show li.active a {
-		color: #f5a425;
+		color: var(--goldColor);
 	}
 
 	.main-nav li:hover a,
@@ -349,6 +356,9 @@ screen and (max-height: 300px) {
 	#tabs ul li a {
         font-size: 12px;
     }
+	#tabs ul li a.pad {
+		padding: 10px;
+	}
 }
 
 /* smallest devices */
@@ -369,4 +379,7 @@ screen and (max-height: 300px) {
 	#tabs ul li a {
         font-size: 11px;
     }
+	#tabs ul li a.pad {
+		padding: 9px;
+	}
 }

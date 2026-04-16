@@ -1,5 +1,5 @@
 import backgroundVideo from '../assets/images/course-video.mp4'
-import { schoolName } from '../entry/entry'
+import { schoolInfo } from '../entry/entry'
 import { Link } from 'react-router-dom';
 
 function Banner() {
@@ -11,7 +11,7 @@ function Banner() {
 
 			<div className="video-overlay header-text">
 				<div className="caption">
-					<h6>{schoolName.the} {schoolName.totalman} {schoolName.school}</h6>
+					<h6>{schoolInfo.the} {schoolInfo.totalman} {schoolInfo.school}</h6>
 					<h2>Shaping <em>Minds</em>. Inspiring Excellence and Building <em>Future Leaders</em>.</h2>
 					<div className="main-button">
 						<div className="scroll-to-section"><Link>Discover more</Link></div>

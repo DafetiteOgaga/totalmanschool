@@ -7,10 +7,10 @@ function PageNotFound() {
 			<div className="container">
 				<DebugModeComp />
 			</div>
-			<div className="container"
+			{/* <div className="container"
 			style={{paddingTop: 80}}>
 				<AppLogo />
-			</div>
+			</div> */}
 		</section>
 	)
 }

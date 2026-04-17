@@ -24,11 +24,20 @@ body {
 	z-index: 999;
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'Cooper Black';
 	src: url('../fonts/CooperBlackRegular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
+} */
+@font-face {
+  font-family: 'Cooper Black';
+  src:
+    url('../fonts/cooperblackregular-webfont.woff2') format('woff2'),
+    url('../fonts/cooperblackregular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Basic */
@@ -96,6 +105,7 @@ p {
     display: inline-block;
     padding: 15px 20px;
     border: 2px solid var(--whiteBorderColor);
+    border-radius: 10px;
 }
 
 
@@ -341,6 +351,7 @@ section.features .col-4 {
   background-color: #0c1228;
   color: var(--white);
   padding: 40px;
+  border-radius: 10px 10px 0 0;
 }
 
 .features-content:hover {
@@ -487,6 +498,7 @@ section.why-us {
     left: 50%;
     transform: translate(-50%);
     bottom: 0;
+    border-radius: 50px;
 }
 #tabs ul li a:before {
     transition: all 0.3s;
@@ -499,6 +511,7 @@ section.why-us {
     left: 50%;
     transform: translate(-50%);
     bottom: -5px;
+    border-radius: 50px;
 }
 #tabs ul li span {
   display: block;
@@ -541,6 +554,10 @@ section.why-us {
     width: 100%;
     overflow: hidden;
     padding-right: 45px;
+}
+.b-rad-10px {
+  border-radius: 10px;
+  padding-right: unset !important;
 }
 
 

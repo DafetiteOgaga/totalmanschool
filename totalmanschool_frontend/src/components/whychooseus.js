@@ -5,6 +5,7 @@ import chooseUs02 from '../assets/images/choose-us-image-02.png'
 import chooseUs03 from '../assets/images/choose-us-image-03.png'
 import { schoolInfo } from "../entry/entry";
 import { titleCase } from "../hooks/changeCase";
+import { HangingHeader } from "../feats/feats";
 
 const whyChooseUsArr = [
 	{
@@ -43,11 +44,7 @@ function WhyChooseUs() {
 		<section className="WhyChooseUs section why-us" data-section="section2">
 			<div className="container _1300">
 				<div className="row">
-					<div className="col-md-12">
-						<div className="section-heading">
-							<h2>Why {titleCase(schoolInfo.totalman)} {titleCase(schoolInfo.school)}?</h2>
-						</div>
-					</div>
+					<HangingHeader headerText={`Why ${titleCase(schoolInfo.totalman)} ${titleCase(schoolInfo.school)}?`} />
 					<div className="col-md-12">
 						<div id='tabs'>
 							<ul>

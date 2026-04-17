@@ -5,7 +5,13 @@ import { Link } from 'react-router-dom';
 function Banner() {
 	return (
 		<section className="Banner section main-banner" id="top" data-section="section1">
-			<video autoPlay muted loop id="bg-video">
+			<video
+			autoPlay
+			muted
+			loop
+			playsinline
+			preload="metadata"
+			id="bg-video">
 				<source src={backgroundVideo} type="video/mp4" />
 			</video>
 

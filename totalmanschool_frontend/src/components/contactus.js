@@ -1,5 +1,6 @@
 import { schoolInfo } from "../entry/entry"
 import { useDevice } from "../context/deviceTypeContext"
+import { HangingHeader } from "../feats/feats";
 
 function ContactUs() {
 	const { label, width } = useDevice();
@@ -7,11 +8,7 @@ function ContactUs() {
 		<section className="ContactUs section contact" data-section="section6">
 			<div className="container">
 				<div className="row">
-					<div className="col-md-12">
-						<div className="section-heading">
-							<h2>Contact Us</h2>
-						</div>
-					</div>
+					<HangingHeader headerText={"Contact Us"} />
 					<div className="col-md-6">
 						<form id="contact" action="" method="post">
 							<div className="row">

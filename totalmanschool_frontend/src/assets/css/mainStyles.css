@@ -2,7 +2,9 @@
   --goldColor: #f5a425;
   --background: #172238;
   --whiteBorderColor: #fafafa1a;
-  --white: #fff
+  --white: #fff;
+  --thinOverlay: #162239b3;
+  --thickOverlay: #162239e3;
 }
 
 body {
@@ -24,11 +26,20 @@ body {
 	z-index: 999;
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'Cooper Black';
 	src: url('../fonts/CooperBlackRegular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
+} */
+@font-face {
+  font-family: 'Cooper Black';
+  src:
+    url('../fonts/cooperblackregular-webfont.woff2') format('woff2'),
+    url('../fonts/cooperblackregular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Basic */
@@ -96,6 +107,7 @@ p {
     display: inline-block;
     padding: 15px 20px;
     border: 2px solid var(--whiteBorderColor);
+    border-radius: 10px;
 }
 
 
@@ -269,7 +281,7 @@ a.menu-link { display: none; }
 .video-overlay {
     position: absolute;
     /* background-color: rgba(22,34,57,0.85); */
-    background-color: #162239b3;
+    background-color: var(--thinOverlay);
     top: 0;
     left: 0;
     bottom: 7px;
@@ -341,6 +353,7 @@ section.features .col-4 {
   background-color: #0c1228;
   color: var(--white);
   padding: 40px;
+  border-radius: 10px 10px 0 0;
 }
 
 .features-content:hover {
@@ -416,7 +429,7 @@ section.features .col-4 {
 /* Why Choosing Us */
 
 section.why-us {
-    background-image: url(../images/choosing-bg.jpg);
+    background-image: url(../images/background.jpg);
     background-color: var(--background);
     background-repeat: no-repeat;
     background-size: cover;
@@ -487,6 +500,7 @@ section.why-us {
     left: 50%;
     transform: translate(-50%);
     bottom: 0;
+    border-radius: 50px;
 }
 #tabs ul li a:before {
     transition: all 0.3s;
@@ -499,6 +513,7 @@ section.why-us {
     left: 50%;
     transform: translate(-50%);
     bottom: -5px;
+    border-radius: 50px;
 }
 #tabs ul li span {
   display: block;
@@ -542,12 +557,19 @@ section.why-us {
     overflow: hidden;
     padding-right: 45px;
 }
+.b-rad-10px {
+  border-radius: 10px;
+  padding-right: unset !important;
+}
 
-
+/* bg 162238 */
+/* icons 111930 */
 /* Coming Soon */
 
 section.coming-soon {
-    background-image: url(../images/coming-soon-bg.jpg);
+    background-image:
+      linear-gradient(var(--thickOverlay), var(--thickOverlay)),
+      url(../images/graduation.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--background);
@@ -687,7 +709,7 @@ section.coming-soon form button {
 /* Courses */
 
 section.courses {
-    background-image: url(../images/choosing-bg.jpg);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--background);
@@ -772,106 +794,11 @@ section.courses .owl-carousel button.active {
 }
 
 
-
-
-
-/* Video */
-
-section.video {
-    background-image: url(../images/video-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var(--background);
-    padding: 120px 0px;
-}
-
-section.video .left-content {
-  color: var(--white);
-}
-
-section.video .left-content span {
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-}
-
-section.video .left-content h4 {
-    margin-top: 20px;
-    font-size: 30px;
-    color: var(--white);
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    line-height: 40px;
-    margin-bottom: 20px;
-}
-section.video .left-content h4 em {
-    font-style: normal;
-    color: var(--goldColor);
-}
-
-section.video .left-content .main-button {
-  margin-top: 30px;
-}
-
-.video-item {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 0px auto 0;
-}
-
-.video-item figure {
-  position: relative;
-  width: 100%;
-  font-size: 0;
-}
-.video-item figure img {
-  width: 100%;
-}
-.video-item figure a:before {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  right: 15px;
-  width: 60px;
-  height: 60px;
-  margin-top: -32.5px;
-  margin-left: -32.5px;
-  border-radius: 50%;
-  background-color: var(--goldColor);
-  z-index: 10;
-}
-.video-item figure a:after {
-  content: '';
-  position: absolute;
-  bottom: 27.5px;
-  right: 20px;
-  margin-top: -12.5px;
-  margin-left: -7px;
-  border: solid 13px transparent;
-  border-left: solid 20px;
-  border-left-color: var(--white);
-  z-index: 10;
-}
-.video-item figure a:hover:before {
-  background-color: var(--goldColor);
-}
-
-.video-item .video-caption {
-    position: absolute;
-    z-index: 10;
-    background-color: rgba(250,250,250,0.75);
-    height: 80px;
-    width: 100%;
-    padding: 27px 30px;
-    bottom: 0;
-}
-
-.video-item .video-caption h4 {
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
+/* what we do */
+section.what-we-do {
+  background-image:
+      linear-gradient(var(--thickOverlay), var(--thickOverlay)),
+      url(../images/studentpractical1.jpg);
 }
 
 /* Magnific Popup CSS */
@@ -1333,11 +1260,13 @@ footer {
 
 footer p {
     margin-bottom: 0px;
-    padding: 25px 0px;
+    line-height: normal;
+    /* padding: 25px 0px; */
     color: var(--white);
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: 600;
+    font-size: larger;
+    /* text-transform: uppercase; */
+    /* font-weight: 600; */
+    font-style: italic;
     letter-spacing: 0.5px;
 }
 

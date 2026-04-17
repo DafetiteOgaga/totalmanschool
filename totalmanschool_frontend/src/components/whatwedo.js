@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { useDevice } from '../context/deviceTypeContext'
 import { titleCase } from "../hooks/changeCase"
 import { schoolInfo } from "../entry/entry"
+import { HangingHeader } from "../feats/feats"
 
 const whatWeDoContent = [
 	{
@@ -103,15 +104,10 @@ function WhatWeDo() {
 		return () => clearInterval(intervalRef.current);
 	}, []);
 	return (
-		<section className="WhatWeDo section courses" data-section="section4">
+		<section className="WhatWeDo section courses what-we-do" data-section="section4">
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col-md-12">
-						<div className="section-heading">
-							<h2>What We Do</h2>
-						</div>
-					</div>
-		
+					<HangingHeader headerText={"What We Do"} />
 					<div className="col-md-12">
 						<div
 						id='tabs'>
@@ -119,7 +115,8 @@ function WhatWeDo() {
 								<article className={`tab-state show`}>
 									<div className="row">
 										<div className="col-md-6">
-											<img src={whatWeDoContent[activeTab].image} alt="" />
+											<img className="b-rad-10px"
+											src={whatWeDoContent[activeTab].image} alt="" />
 										</div>
 										<div className="col-md-6">
 										<h4>{whatWeDoContent[activeTab].title}</h4>

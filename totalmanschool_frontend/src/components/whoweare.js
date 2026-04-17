@@ -8,6 +8,7 @@ import course05 from '../assets/images/courses-05.jpg'
 import { useDevice } from '../context/deviceTypeContext'
 import { titleCase } from "../hooks/changeCase"
 import { schoolInfo } from "../entry/entry"
+import { HangingHeader } from "../feats/feats";
 
 const whoWeAreContent = [
 	{
@@ -47,11 +48,7 @@ function WhoWeAre() {
 		<section className="WhoWeAre section courses" data-section="section4">
 			<div className="container _1000">
 				<div className="row">
-					<div className="col-md-12">
-						<div className="section-heading">
-							<h2>Who We Are</h2>
-						</div>
-					</div>
+					<HangingHeader headerText={"Who We Are"} />
 					<div className="col-md-12">
 						<div
 						id='tabs'>

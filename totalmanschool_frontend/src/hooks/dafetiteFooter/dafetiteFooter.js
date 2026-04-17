@@ -2,12 +2,12 @@ import { DateHook } from "./dateHook"
 import './dafetiteFooter.css'
 import dafetite from './dafelogoWhiteTransparent.png'
 
-function DafetiteFooter() {
+function DafetiteFooter({cpText=null}) {
 	const year = DateHook().todayYear;
 	return (
 		<>
 			<span className="DafetiteFooter span-dafetite">
-				<sup>&copy;</sup>Copyright {year} | Developed by
+				<sup>&copy;</sup>{year}{cpText?' '+cpText+'.':''} All rights reserved | Developed by
 				<a
 				target="_blank"
 				rel="noopener noreferrer"

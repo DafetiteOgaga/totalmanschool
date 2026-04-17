@@ -19,15 +19,15 @@ function Header() {
 		setHasMounted(true);
 	}, []);
 	useEffect(() => {
-		console.log('in effect')
+		// console.log('in effect')
 		if (isMobile&&!isMenuOpen&&!toNone) {
-			console.log('removing ul')
+			// console.log('removing ul')
 			const delay = setTimeout(() => {
 				setToNone(true)
 				document.body.style.overflow = "";
 			}, 200);
 		} else if (isMenuOpen&&toNone) {
-			console.log('adding ul')
+			// console.log('adding ul')
 			setToNone(false)
 			document.body.style.overflow = "hidden";
 		}
@@ -41,11 +41,16 @@ function Header() {
 		setIsMenuOpen(false);
 		setIsSubMenuOpen(false);
 	}
+	const aboutUsArgs = {
+		setIsSubMenuOpen, closeMenu, isSubMenuOpen,
+		isMobile, currentPage,
+	}
 	// console.log({toNone, isMenuOpen, isSubMenuOpen, isMobile})
 	return (
 		<header className="Header main-header clearfix" role="header">
 			<div className={`logo ${width>450?'':'rm-pad'}`}>
 				<Link
+				onClick={closeMenu}
 				to={"/"}>
 					<AppLogo />
 				</Link>
@@ -64,32 +69,7 @@ function Header() {
 								${isMenuOpen?'down':'up'}
 								${(toNone&&isMobile)?'d-none':''}
 								`}>
-					<li className={`has-submenu ${(currentPage==='who-we-are'||currentPage==='what-we-do')?'active':''}`}
-					onMouseEnter={()=>setIsSubMenuOpen(prev=>!prev)}
-					onMouseLeave={()=>setIsSubMenuOpen(prev=>!prev)}>
-						<Link
-							>About Us
-						</Link>
-						{(!isMobile||(isMobile&&isSubMenuOpen))?
-						<ul className={`sub-menu`}>
-							<li className='active'>
-								<Link
-									onClick={closeMenu}
-									to={"who-we-are"}
-									>Who we are?
-								</Link>
-							</li>
-							<li>
-								<Link
-									onClick={closeMenu}
-									to={"what-we-do"}
-									>
-										What we do?
-								</Link>
-							</li>
-						</ul>
-						:null}
-					</li>
+					<AboutUs {...aboutUsArgs} />
 					<li className={`${currentPage==='contact-us'?'active':''}`}>
 						<Link
 							onClick={closeMenu}
@@ -108,5 +88,44 @@ function Header() {
 			className={isMenuOpen?'page-overlay':''} />
 		</header>
 	)
+}
+function AboutUs({setIsSubMenuOpen, closeMenu, isSubMenuOpen, isMobile, currentPage}) {
+	const subMenus = (
+		<>
+			<li className={`${currentPage==='who-we-are'?'active':''}`}>
+				<Link
+					onClick={closeMenu}
+					to={"who-we-are"}
+					>Who we are?
+				</Link>
+			</li>
+			<li className={`${currentPage==='what-we-do'?'active':''}`}>
+				<Link
+					onClick={closeMenu}
+					to={"what-we-do"}
+					>
+						What we do?
+				</Link>
+			</li>
+		</>
+	)
+	if (isMobile) {
+		return subMenus
+	} else {
+		return (
+			<li className={`has-submenu ${(currentPage==='who-we-are'||currentPage==='what-we-do')?'active':''}`}
+			onMouseEnter={()=>setIsSubMenuOpen(prev=>!prev)}
+			onMouseLeave={()=>setIsSubMenuOpen(prev=>!prev)}>
+				<Link
+					>About Us
+				</Link>
+				{(!isMobile||(isMobile&&isSubMenuOpen))?
+				<ul className={`sub-menu`}>
+					{subMenus}
+				</ul>
+				:null}
+			</li>
+		)
+	}
 }
 export { Header }

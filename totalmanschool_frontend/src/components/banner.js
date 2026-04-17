@@ -1,12 +1,20 @@
-import backgroundVideo from '../assets/images/course-video.mp4'
+import backgroundVideoMP4 from '../assets/images/course-video.mp4'
+// import backgroundVideoWEBM from '../assets/images/course-video.webm'
 import { schoolInfo } from '../entry/entry'
 import { Link } from 'react-router-dom';
 
 function Banner() {
 	return (
 		<section className="Banner section main-banner" id="top" data-section="section1">
-			<video autoPlay muted loop id="bg-video">
-				<source src={backgroundVideo} type="video/mp4" />
+			<video
+			autoPlay
+			muted
+			loop
+			playsInline
+			preload="metadata"
+			id="bg-video">
+				<source src={backgroundVideoMP4} type="video/mp4" />
+				{/* <source src={backgroundVideoWEBM} type="video/webm" /> */}
 			</video>
 
 			<div className="video-overlay header-text">

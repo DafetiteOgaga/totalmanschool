@@ -19,15 +19,15 @@ function Header() {
 		setHasMounted(true);
 	}, []);
 	useEffect(() => {
-		console.log('in effect')
+		// console.log('in effect')
 		if (isMobile&&!isMenuOpen&&!toNone) {
-			console.log('removing ul')
+			// console.log('removing ul')
 			const delay = setTimeout(() => {
 				setToNone(true)
 				document.body.style.overflow = "";
 			}, 200);
 		} else if (isMenuOpen&&toNone) {
-			console.log('adding ul')
+			// console.log('adding ul')
 			setToNone(false)
 			document.body.style.overflow = "hidden";
 		}

@@ -104,7 +104,7 @@ function WhatWeDo() {
 		return () => clearInterval(intervalRef.current);
 	}, []);
 	return (
-		<section className="WhatWeDo section courses" data-section="section4">
+		<section className="WhatWeDo section courses what-we-do" data-section="section4">
 			<div className="container-fluid">
 				<div className="row">
 					<HangingHeader headerText={"What We Do"} />

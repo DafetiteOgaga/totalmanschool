@@ -90,6 +90,7 @@ RESPONSIVE STYLES (DESKTOP-FIRST FIXED)
 	}
 	.features-content {
 		position: relative;
+		border-radius: unset;
 	}
 	.features-post {
 		border-left: 0;
@@ -347,7 +348,7 @@ screen and (max-height: 300px) {
         font-size: 27px;
     }
 	a.menu-link.pad-up {
-        padding-top: 13.5px;
+        padding-top: 17.5px;
     }
 }
 
@@ -370,7 +371,7 @@ screen and (max-height: 300px) {
         font-size: 23px;
     }
 	a.menu-link.pad-up {
-        padding-top: 15.5px;
+        padding-top: 19px;
     }
 }
 

@@ -138,7 +138,7 @@ RESPONSIVE STYLES (DESKTOP-FIRST FIXED)
 
 /* ----------- MAX WIDTH: 900px ----------- */
 @media all and (max-width: 900px) {
-	.mfp-arrow {
+	/* .mfp-arrow {
 		transform: scale(0.75);
 	}
 	.mfp-arrow-left {
@@ -150,6 +150,12 @@ RESPONSIVE STYLES (DESKTOP-FIRST FIXED)
 	.mfp-container {
 		padding-left: 6px;
 		padding-right: 6px;
+	} */
+	.badge-svg {
+		width: 75px;
+	}
+	.text-svg {
+		width: 370px;
 	}
 }
 
@@ -191,6 +197,9 @@ screen and (max-height: 300px) {
 	.main-menu li a {
 		padding: 10px 3px;
 	}
+	.text-svg {
+		width: 350px;
+	}
 }
 
 /* ----------- MAX WIDTH: 767px ----------- */
@@ -202,6 +211,12 @@ screen and (max-height: 300px) {
 	.main-header .logo {
 		height: 50px;
 	}
+	.badge-svg {
+        width: 55px;
+    }
+	.text-svg {
+        width: 250px;
+    }
 	#tabs ul li a.pad {
 		padding: 11px;
 	}
@@ -363,6 +378,12 @@ screen and (max-height: 300px) {
 
 /* even smaller devices */
 @media screen and (max-width: 420px) {
+	.badge-svg {
+        width: 45px;
+    }
+	.text-svg {
+        width: 230px;
+    }
 	#tabs ul li a {
         font-size: 12px;
     }
@@ -386,6 +407,12 @@ screen and (max-height: 300px) {
 
 /* even smallest devices */
 @media screen and (max-width: 370px) {
+	.badge-svg {
+        width: 35px;
+    }
+	.text-svg {
+        width: 210px;
+    }
 	#tabs ul li a {
         font-size: 11px;
     }

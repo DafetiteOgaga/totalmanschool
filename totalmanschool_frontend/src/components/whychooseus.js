@@ -1,8 +1,8 @@
 import { useState, useEffect,useRef } from "react"
 import { Link } from 'react-router-dom';
-import chooseUs01 from '../assets/images/choose-us-image-01.png'
-import chooseUs02 from '../assets/images/choose-us-image-02.png'
-import chooseUs03 from '../assets/images/choose-us-image-03.png'
+import chooseUs01 from '../assets/images/choose1.jpg'
+import chooseUs02 from '../assets/images/choose2.jpg'
+import chooseUs03 from '../assets/images/choose3.jpg'
 import { schoolInfo } from "../entry/entry";
 import { titleCase } from "../hooks/changeCase";
 import { HangingHeader } from "../feats/feats";

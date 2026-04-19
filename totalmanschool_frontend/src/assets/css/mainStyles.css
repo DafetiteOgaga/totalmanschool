@@ -86,6 +86,27 @@ p {
     line-height: 22px;
 }
 
+/* logo and name */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;           /* space between badge and text */
+  white-space: nowrap;
+}
+.badge-svg {
+  width: 90px;
+  height: 60px;
+  flex: 0 0 auto;
+  display: block;
+  overflow: visible;
+}
+.text-svg {
+  width: 400px;
+  /* height: 60px; */
+  flex: 0 0 auto;
+  display: block;
+  overflow: visible;
+}
 
 .section-heading {
     text-align: center;
@@ -167,7 +188,7 @@ a.menu-link { display: none; }
 
 .main-header {
     background-color: var(--whiteBG);
-    height: 80px;
+    height: 75px;
     position: fixed;
     z-index: 12;
     width: 100%;

@@ -32,7 +32,7 @@ function Features() {
 				<div className={`row justify-content-center ${width>900?'flex-nowrap':''}`}>
 					{featuresArr.map((feature, fidx) => {
 						return (
-							<div key={fidx} className="col-lg-4 col-12">
+							<div key={fidx} className={`col-lg-4 col-12 ${width>900?'':'p-0'}`}>
 								<div className="features-post">
 									<div className="features-content">
 										<div className="content-show">

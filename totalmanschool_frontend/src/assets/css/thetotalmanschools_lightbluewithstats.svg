@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <rect width="100%" height="100%" fill="#1f5a99"/>
+
+  <defs>
+    <style>
+      .line { fill: none; stroke: rgba(255,255,255,0.45); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke-width: 2; }
+      .text1 { fill: rgba(255,255,255,0.32); font-family: 'Cooper Black', serif; font-weight: 700; }
+      .text2 { fill: rgba(255,255,255,0.25); font-family: 'Arial', sans-serif; letter-spacing: 4px; }
+      .text3 { fill: rgba(255,255,255,0.22); font-family: 'Brush Script MT', cursive; }
+    </style>
+
+    <g id="book">
+      <path class="line" d="M10 15 L60 5 L60 55 L10 65 Z"/>
+      <path class="line" d="M60 5 L90 20 L90 70 L60 55 Z"/>
+      <path class="thin" d="M18 24 L50 18"/>
+      <path class="thin" d="M18 34 L50 28"/>
+      <path class="thin" d="M18 44 L50 38"/>
+    </g>
+
+    <g id="pencil">
+      <path class="line" d="M10 40 L90 10 L100 35 L20 65 Z"/>
+      <path class="line" d="M90 10 L110 0 L100 35 Z"/>
+      <path class="thin" d="M28 52 L98 26"/>
+    </g>
+
+    <g id="ruler">
+      <rect class="line" x="0" y="0" width="120" height="24" rx="3"/>
+      <path class="thin" d="M12 0 V12 M24 0 V18 M36 0 V12 M48 0 V18 M60 0 V12 M72 0 V18 M84 0 V12 M96 0 V18 M108 0 V12"/>
+    </g>
+
+    <g id="bag">
+      <path class="line" d="M20 35 Q20 10 50 10 Q80 10 80 35 V90 Q80 100 70 100 H30 Q20 100 20 90 Z"/>
+      <path class="line" d="M35 35 Q35 22 50 22 Q65 22 65 35"/>
+      <rect class="thin" x="34" y="55" width="32" height="20" rx="4"/>
+    </g>
+
+    <g id="paperplane">
+      <path class="line" d="M0 30 L120 0 L70 45 L120 70 Z"/>
+      <path class="thin" d="M70 45 L40 90"/>
+    </g>
+
+    <g id="notebook">
+      <rect class="line" x="10" y="10" width="80" height="110" rx="6"/>
+      <path class="thin" d="M28 10 V120"/>
+      <path class="thin" d="M40 30 H74 M40 48 H74 M40 66 H74 M40 84 H74"/>
+    </g>
+
+    <g id="star">
+      <path class="thin" d="M10 0 L13 7 L20 10 L13 13 L10 20 L7 13 L0 10 L7 7 Z"/>
+    </g>
+  </defs>
+
+  <use href="#pencil" transform="translate(40 80) rotate(-18) scale(1.1)"/>
+  <use href="#book" transform="translate(250 40) rotate(10) scale(1.2)"/>
+  <use href="#ruler" transform="translate(760 60) rotate(-24) scale(1.1)"/>
+  <use href="#bag" transform="translate(1360 110) rotate(8) scale(1.1)"/>
+  <use href="#notebook" transform="translate(1380 760) rotate(14) scale(1.2)"/>
+  <use href="#paperplane" transform="translate(820 650) rotate(8) scale(0.9)"/>
+  <use href="#bag" transform="translate(180 610) rotate(-8) scale(1.15)"/>
+  <use href="#pencil" transform="translate(420 270) rotate(26) scale(0.9)"/>
+  <use href="#book" transform="translate(820 760) rotate(10) scale(1.1)"/>
+  <use href="#ruler" transform="translate(1110 640) rotate(-16) scale(1.1)"/>
+  <use href="#notebook" transform="translate(40 600) rotate(-18) scale(0.95)"/>
+
+  <text x="800" y="470" text-anchor="middle" class="text1" font-size="48">THE</text>
+  <text x="800" y="560" text-anchor="middle" class="text1" font-size="110">TOTALMAN</text>
+  <text x="800" y="660" text-anchor="middle" class="text1" font-size="92">SCHOOLS</text>
+
+  <text x="430" y="210" transform="rotate(-8 430 210)" class="text2" font-size="64">LEARN</text>
+  <text x="1210" y="160" transform="rotate(-12 1210 160)" class="text1" font-size="52">TOTALMAN</text>
+  <text x="1180" y="220" transform="rotate(-12 1180 220)" class="text1" font-size="52">SCHOOLS</text>
+  <text x="118" y="470" transform="rotate(-10 118 470)" class="text2" font-size="54">EDUCATION</text>
+  <text x="1220" y="760" transform="rotate(6 1220 760)" class="text2" font-size="52">KNOWLEDGE</text>
+  <text x="120" y="860" transform="rotate(-12 120 860)" class="text1" font-size="56">THE</text>
+  <text x="70" y="920" transform="rotate(-12 70 920)" class="text1" font-size="74">TOTALMAN</text>
+  <text x="95" y="980" transform="rotate(-12 95 980)" class="text1" font-size="62">SCHOOLS</text>
+  <text x="630" y="140" transform="rotate(14 630 140)" class="text3" font-size="36">Excellence</text>
+
+  <g opacity="0.5">
+    <use href="#star" transform="translate(80 180) scale(2)"/>
+    <use href="#star" transform="translate(170 910) scale(2)"/>
+    <use href="#star" transform="translate(530 740) scale(1.8)"/>
+    <use href="#star" transform="translate(710 300) scale(1.6)"/>
+    <use href="#star" transform="translate(960 860) scale(1.6)"/>
+    <use href="#star" transform="translate(1340 340) scale(1.8)"/>
+    <use href="#star" transform="translate(1480 180) scale(2)"/>
+    <use href="#star" transform="translate(1500 870) scale(1.8)"/>
+  </g>
+</svg>

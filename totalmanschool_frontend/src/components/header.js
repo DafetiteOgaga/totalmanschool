@@ -1,12 +1,14 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { schoolInfo } from '../entry/entry';
 import { AppLogo } from './appLogo';
 import { useEffect, useRef, useState } from 'react';
 import { useDevice } from '../context/deviceTypeContext';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logoBadge from '../assets/images/logo_badge.png'
 
 function Header() {
 	const currentPage = useLocation().pathname.split("/")[1]
+	const navigateTo = useNavigate()
 	// console.log({currentPage})
 	const { label, width } = useDevice()
 	const isMobile = width<=767
@@ -37,18 +39,26 @@ function Header() {
 		};
 	}, [isMenuOpen])
 
-	function closeMenu() {
+	const closeMenu = () => {
 		setIsMenuOpen(false);
 		setIsSubMenuOpen(false);
 	}
+
 	const aboutUsArgs = {
 		setIsSubMenuOpen, closeMenu, isSubMenuOpen,
-		isMobile, currentPage,
+		isMobile, currentPage, navigateTo,
 	}
 	// console.log({toNone, isMenuOpen, isSubMenuOpen, isMobile})
 	return (
 		<header className="Header main-header clearfix" role="header">
 			<div className={`logo ${width>450?'':'rm-pad'}`}>
+				{/* <img
+				src={logoBadge}
+				alt='logo'
+				style={{
+					width: 50,
+					// height: 50,
+				}}/> */}
 				<Link
 				onClick={closeMenu}
 				to={"/"}>
@@ -61,7 +71,7 @@ function Header() {
 				setIsMenuOpen((prev) => !prev);
 			}}
 			className={`menu-link ${width<=450?'pad-up':''}`}>
-				<FontAwesomeIcon icon={isMenuOpen?"times":"bars"} color="#fff" />
+				<FontAwesomeIcon icon={isMenuOpen?"times":"bars"} color="#1f5a99" />
 			</Link>
 			<nav className={`main-nav ${hasMounted?'':'d-none'}`}
 			onClick={(e) => e.stopPropagation()}>
@@ -70,7 +80,8 @@ function Header() {
 								${(toNone&&isMobile)?'d-none':''}
 								`}>
 					<AboutUs {...aboutUsArgs} />
-					<li className={`${currentPage==='contact-us'?'active':''}`}>
+					<li className={`${currentPage==='contact-us'?'active':''}`}
+					onClick={()=>navigateTo("contact-us")}>
 						<Link
 							onClick={closeMenu}
 							to={"contact-us"}>
@@ -89,17 +100,19 @@ function Header() {
 		</header>
 	)
 }
-function AboutUs({setIsSubMenuOpen, closeMenu, isSubMenuOpen, isMobile, currentPage}) {
+function AboutUs({setIsSubMenuOpen, closeMenu, isSubMenuOpen, isMobile, currentPage, navigateTo}) {
 	const subMenus = (
 		<>
-			<li className={`${currentPage==='who-we-are'?'active':''}`}>
+			<li className={`${currentPage==='who-we-are'?'active':''}`}
+			onClick={()=>navigateTo("who-we-are")}>
 				<Link
 					onClick={closeMenu}
 					to={"who-we-are"}
 					>Who we are?
 				</Link>
 			</li>
-			<li className={`${currentPage==='what-we-do'?'active':''}`}>
+			<li className={`${currentPage==='what-we-do'?'active':''}`}
+			onClick={()=>navigateTo("what-we-do")}>
 				<Link
 					onClick={closeMenu}
 					to={"what-we-do"}

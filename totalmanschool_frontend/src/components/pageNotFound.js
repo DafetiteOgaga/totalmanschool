@@ -1,5 +1,5 @@
 import { DebugModeComp } from "../hooks/debugSetup/debugToggler";
-import { AppLogo } from "./appLogo";
+// import { AppLogo, BadgeOutline } from "./appLogo";
 
 function PageNotFound() {
 	return (
@@ -9,7 +9,7 @@ function PageNotFound() {
 			</div>
 			{/* <div className="container"
 			style={{paddingTop: 80}}>
-				<AppLogo />
+				<BadgeOutline />
 			</div> */}
 		</section>
 	)

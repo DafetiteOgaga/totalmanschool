@@ -2,6 +2,8 @@ import backgroundVideoMP4 from '../assets/images/course-video.mp4'
 // import backgroundVideoWEBM from '../assets/images/course-video.webm'
 import { schoolInfo } from '../entry/entry'
 import { Link } from 'react-router-dom';
+import { BadgeOutline } from './appLogo';
+// import logoBadge from '../assets/images/logo_badge.png'
 
 function Banner() {
 	return (
@@ -19,8 +21,12 @@ function Banner() {
 
 			<div className="video-overlay header-text">
 				<div className="caption">
+					{/* <img src={logoBadge} alt='logo' /> */}
+					<div className='badge'>
+						<BadgeOutline />
+					</div>
 					<h6>{schoolInfo.the} {schoolInfo.totalman} {schoolInfo.school}</h6>
-					<h2>Shaping <em>Minds</em>. Inspiring Excellence and Building <em>Future Leaders</em>.</h2>
+					<h2>Shaping <em>Minds</em>, inspiring <em>Excellence</em> and building <em>Future Leaders</em>.</h2>
 					<div className="main-button">
 						<div className="scroll-to-section"><Link>Discover more</Link></div>
 					</div>

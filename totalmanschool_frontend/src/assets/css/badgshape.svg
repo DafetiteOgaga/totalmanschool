@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360">
+  <!-- Main shield shape -->
+  <path
+    d="M115 10
+       H385
+       L420 45
+       C395 80 392 120 390 150
+       C388 205 360 255 250 320
+       C140 255 112 205 110 150
+       C108 120 105 80 80 45
+       Z"
+    fill="#7db9e8"
+    stroke="#2b1386"
+    stroke-width="8"
+    stroke-linejoin="round"
+  />
+
+  <!-- Bottom ribbon shape -->
+  <path
+    d="M120 215
+       C80 220 60 235 45 255
+       L65 270
+       C78 255 92 248 110 246
+       C145 245 165 260 185 282
+       C205 304 225 324 250 340
+       C275 324 295 304 315 282
+       C335 260 355 245 390 246
+       C408 248 422 255 435 270
+       L455 255
+       C440 235 420 220 380 215"
+    fill="none"
+    stroke="#2b1386"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Left ribbon curl -->
+  <path
+    d="M42 255
+       C25 248 18 230 28 218
+       C38 206 58 208 72 222
+       L65 270"
+    fill="none"
+    stroke="#2b1386"
+    stroke-width="8"
+    stroke-linejoin="round"
+  />
+
+  <!-- Right ribbon curl -->
+  <path
+    d="M458 255
+       C475 248 482 230 472 218
+       C462 206 442 208 428 222
+       L435 270"
+    fill="none"
+    stroke="#2b1386"
+    stroke-width="8"
+    stroke-linejoin="round"
+  />
+</svg>

@@ -1,10 +1,9 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { schoolInfo } from '../entry/entry';
-import { AppLogo } from './appLogo';
+import { SchoolLogo } from './appLogo';
 import { useEffect, useRef, useState } from 'react';
 import { useDevice } from '../context/deviceTypeContext';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logoBadge from '../assets/images/logo_badge.png'
 
 function Header() {
 	const currentPage = useLocation().pathname.split("/")[1]
@@ -62,7 +61,10 @@ function Header() {
 				<Link
 				onClick={closeMenu}
 				to={"/"}>
-					<AppLogo />
+					<>
+						<SchoolLogo />
+						{/* <AppLogo /> */}
+					</>
 				</Link>
 			</div>
 			<Link

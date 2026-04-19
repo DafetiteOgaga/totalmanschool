@@ -195,6 +195,13 @@ screen and (max-height: 300px) {
 
 /* ----------- MAX WIDTH: 767px ----------- */
 @media screen and (max-width: 767px) {
+
+	.main-header {
+		height: 60px;
+	}
+	.main-header .logo {
+		height: 50px;
+	}
 	#tabs ul li a.pad {
 		padding: 11px;
 	}
@@ -350,7 +357,7 @@ screen and (max-height: 300px) {
         font-size: 27px;
     }
 	a.menu-link.pad-up {
-        padding-top: 18px;
+        padding-top: 12px;
     }
 }
 
@@ -372,9 +379,9 @@ screen and (max-height: 300px) {
 	a.menu-link {
         font-size: 23px;
     }
-	a.menu-link.pad-up {
-        padding-top: 20px;
-    }
+	/* a.menu-link.pad-up {
+        padding-top: 12px;
+    } */
 }
 
 /* even smallest devices */

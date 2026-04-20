@@ -255,6 +255,7 @@ a.menu-link { display: none; }
 .main-menu li .sub-menu {
     position: absolute;
     width: 135px;
+    top: 90%;
     background-color: var(--whiteBG);
     opacity: 0;
     visibility: hidden;

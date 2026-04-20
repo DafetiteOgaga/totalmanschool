@@ -481,20 +481,23 @@ section.features .col-4 {
   transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
 }
 .features-post:hover .content-hide {
-  /* display: block;
-  overflow: hidden;
-  height: 147.969px;
-  padding-top: 0px;
-  margin-top: 14.9969px;
-  padding-bottom: 0px;
-  margin-bottom: 0px; */
-  max-height: 200px;           /* must be >= actual content height */
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 15px;
+}
+
+.features-post .content-hide.show {
+  max-height: 400px; /* just enough — don't use 1000px */
   opacity: 1;
   margin-top: 15px;
 }
 
 .content-hide p {
   color: var(--lightBlue);
+}
+
+.content-hide.show p.hidden-sm {
+  display: block;
 }
 
 

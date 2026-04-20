@@ -317,8 +317,8 @@ screen and (max-height: 300px) {
 
 	.features-content h4 { font-size: 14px; }
 
-	.features-content p { display: none; }
-	.features-content p.hidden-sm { display: block; }
+	/* .features-content p { display: none; } */
+	/* .features-content p.hidden-sm { display: block; } */
 
 	.features-content a {
 		font-size: 13px;

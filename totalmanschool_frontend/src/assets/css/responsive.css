@@ -212,10 +212,10 @@ screen and (max-height: 300px) {
 		height: 50px;
 	}
 	.badge-svg {
-        width: 55px;
+        width: 40px;
     }
 	.text-svg {
-        width: 250px;
+        width: 270px;
     }
 	#tabs ul li a.pad {
 		padding: 11px;
@@ -379,10 +379,10 @@ screen and (max-height: 300px) {
 /* even smaller devices */
 @media screen and (max-width: 420px) {
 	.badge-svg {
-        width: 45px;
+        width: 35px;
     }
 	.text-svg {
-        width: 230px;
+        width: 255px;
     }
 	#tabs ul li a {
         font-size: 12px;
@@ -400,18 +400,21 @@ screen and (max-height: 300px) {
 	a.menu-link {
         font-size: 23px;
     }
-	/* a.menu-link.pad-up {
-        padding-top: 12px;
-    } */
+	.badge-svg {
+        width: 30px;
+    }
+	.text-svg {
+        width: 245px;
+    }
 }
 
 /* even smallest devices */
 @media screen and (max-width: 370px) {
-	.badge-svg {
+	/* .badge-svg {
         width: 35px;
-    }
+    } */
 	.text-svg {
-        width: 210px;
+        width: 215px;
     }
 	#tabs ul li a {
         font-size: 11px;

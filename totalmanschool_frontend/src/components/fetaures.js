@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import { useDevice } from '../context/deviceTypeContext';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from 'react';
 
 const featuresArr = [
 	{
@@ -25,28 +26,35 @@ const featuresArr = [
 ]
 
 function Features() {
+	const [isMoreOpened, setIsMoreOpened] = useState(null)
 	const { label, width } = useDevice()
 	return (
 		<section className="Features features">
 			<div className="container">
 				<div className={`row justify-content-center ${width>900?'flex-nowrap':''}`}>
 					{featuresArr.map((feature, fidx) => {
+						const isOpen = isMoreOpened === fidx
 						return (
 							<div key={fidx} className={`col-lg-4 col-12 ${width>900?'':'p-0'}`}>
 								<div className="features-post">
-									<div className="features-content">
+									<div className="features-content"
+									onMouseLeave={()=>setIsMoreOpened(null)}
+									>
 										<div className="content-show">
 											<h4>
 												<FontAwesomeIcon icon={feature.icon} color="#fff" /> {feature.title}</h4>
 										</div>
-										<div className="content-hide">
+										<div className={`content-hide ${isOpen?'show':''}`}>
 											<p className='font-md'>
 												{feature.para1}
 											</p>
-											<p className="font-md hidden-sm">
+											<p className={`font-md hidden-sm`}>
+												<br/>
 												{feature.para2}
 											</p>
-											<div className="scroll-to-section"><Link>More Info.</Link></div>
+											<div className="scroll-to-section"><Link onClick={()=>setIsMoreOpened(isOpen?null:fidx)}>
+												{isOpen ? "Less Info." : "More Info."}
+											</Link></div>
 										</div>
 									</div>
 								</div>

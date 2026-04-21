@@ -87,7 +87,7 @@ RESPONSIVE STYLES (DESKTOP-FIRST FIXED)
 	}
 
 	.features {
-		background-color: #0c1228;
+		background-color: var(--lightBlue);
 	}
 	.features-content {
 		position: relative;
@@ -164,7 +164,7 @@ RESPONSIVE STYLES (DESKTOP-FIRST FIXED)
 @media screen and (max-width: 800px) and (orientation: landscape),
 screen and (max-height: 300px) {
 
-	.mfp-img-mobile .mfp-image-holder {
+	/* .mfp-img-mobile .mfp-image-holder {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -189,7 +189,7 @@ screen and (max-height: 300px) {
 		background: rgba(0, 0, 0, 0.6);
 		position: fixed;
 		text-align: center;
-	}
+	} */
 }
 
 /* ----------- MAX WIDTH: 800px ----------- */
@@ -225,7 +225,7 @@ screen and (max-height: 300px) {
 		float: right;
 		display: block;
 		font-size: 36px;
-		color: #fff;
+		color: var(--white);
 		padding-right: 30px;
 		padding-top: 15px;
 	}
@@ -263,7 +263,7 @@ screen and (max-height: 300px) {
 		padding: 15px 0;
 		border-bottom: 1px solid rgba(250,250,250,0.25);
 		text-align: center;
-		color: #fff;
+		color: var(--white);
 		font-size: 13px;
 		font-weight: 700;
 		line-height: 1.5;

@@ -90,11 +90,11 @@ function Header() {
 								Contact
 						</Link>
 					</li>
-					{/* <li>
+					<li>
 						<Link>
 								{width}px
 						</Link>
-					</li> */}
+					</li>
 				</ul>
 			</nav>
 			<div onClick={closeMenu}

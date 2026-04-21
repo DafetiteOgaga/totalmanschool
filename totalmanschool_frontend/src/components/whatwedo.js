@@ -114,13 +114,16 @@ function WhatWeDo() {
 						id='tabs'>
 							<section className='tabs-content mt-0'>
 								<article className={`tab-state show`}>
-									<div key={activeTab} className="row swap-animate swap-slide-top">
+									<div
+									// key={activeTab}
+									className="row swap-animate swap-slide-top">
 										<div
 										className={`col-md-6 swap-animate swap-slide-left`}>
-											<img className="b-rad-10px swap-animate swap-slide-left"
+											<img key={whatWeDoContent[activeTab].image}
+											className="b-rad-10px swap-animate swap-slide-left"
 											src={whatWeDoContent[activeTab].image} alt="" />
 										</div>
-										<div
+										<div key={whatWeDoContent[activeTab].description}
 										className="col-md-6 swap-animate swap-slide-right">
 											<h4 className="swap-animate swap-slide-bottom">{whatWeDoContent[activeTab].title}</h4>
 											<p className='font-lgr swap-animate swap-slide-top'>

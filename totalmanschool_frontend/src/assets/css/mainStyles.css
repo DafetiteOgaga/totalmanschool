@@ -19,6 +19,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 .page-overlay {
@@ -898,6 +899,7 @@ section.what-we-do {
       linear-gradient(var(--thickOverlay), var(--thickOverlay)),
       url(../images/studentpractical1.jpg); */
     background-color: var(--whiteBG);
+    padding: 0px 5px 100px 5px;
 }
 
 /* Magnific Popup CSS */

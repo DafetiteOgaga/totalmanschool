@@ -57,12 +57,12 @@ function WhoWeAre() {
 									return (
 										<article key={idx} className={`tab-state show`}>
 											<div className={`row`}>
-													<div className="m-auto">
+													<div className="m-auto animate slide-from-top">
 														<FontAwesomeIcon icon={item.icon} size="5x" color="#fff" />
 													</div>
 													<div>
-														<h4 className="m-auto d-flex justify-content-center pt-3">{item.title}</h4>
-														<p className='font-lgr pb-4'>
+														<h4 className={`m-auto d-flex justify-content-center pt-2 animate slide-from-${idx%2===0?'left':'right'}`}>{item.title}</h4>
+														<p className='font-lgr pb-3 animate slide-from-bottom'>
 															{item.description}
 														</p>
 													</div>

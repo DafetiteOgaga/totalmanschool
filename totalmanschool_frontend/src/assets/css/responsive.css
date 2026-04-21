@@ -330,6 +330,9 @@ screen and (max-height: 300px) {
 
 	.tabs-content img { padding-right: 0; }
 
+	.what-we-do .tabs-content {
+		min-height: 580px;
+	}
 	section.coming-soon .container h4 {
 		text-align: center;
 	}

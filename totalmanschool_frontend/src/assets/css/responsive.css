@@ -352,6 +352,9 @@ screen and (max-height: 300px) {
 		margin-bottom: 30px;
 	}
 
+	section.what-we-do {
+		padding: 0px 5px 100px 5px;
+	}
 	footer p {
 		font-size: medium;
 		/* font-weight: 600; */

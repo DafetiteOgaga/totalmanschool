@@ -10,7 +10,7 @@
   --whiteBG: #f1f1f1;
   --thinOverlay: #162239b3;
   --thickOverlay: #162239e3;
-  --veryThickOverlay: #1622399d;
+  --veryThickOverlay: #1622397a;
   --shadowColor: #00000080;
   --fontColor: #29166f;
   --lighter: #bcb9c58f;
@@ -90,7 +90,7 @@ p {
 .logo-wrapper {
   display: flex;
   align-items: center;
-  gap: 8px;           /* space between badge and text */
+  gap: 8px;
   white-space: nowrap;
 }
 .badge-svg {
@@ -358,12 +358,6 @@ a.menu-link { display: none; }
   top: 50%;
   transform: translate(-50%,-50%);
 }
-
-/* .main-banner .caption .badge {
-  margin: auto;
-  width: 200px;
-  height: 180px;
-} */
 
 .main-banner .caption h6 {
   margin-top: 0px;

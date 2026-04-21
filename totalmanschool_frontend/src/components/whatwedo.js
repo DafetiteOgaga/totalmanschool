@@ -94,10 +94,10 @@ function WhatWeDo() {
 	const { label, width } = useDevice()
 
 	const resetInterval = () => {
-		// clearInterval(intervalRef.current);
-		// intervalRef.current = setInterval(() => {
-		// 	setActiveTab(prev => prev === TOTAL_TABS ? 0 : prev + 1);
-		// }, 5000); // 30 seconds
+		clearInterval(intervalRef.current);
+		intervalRef.current = setInterval(() => {
+			setActiveTab(prev => prev === TOTAL_TABS ? 0 : prev + 1);
+		}, 5000); // 30 seconds
 	};
 
 	useEffect(() => {

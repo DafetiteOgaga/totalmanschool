@@ -330,6 +330,10 @@ screen and (max-height: 300px) {
 
 	.tabs-content img { padding-right: 0; }
 
+	#tabs ul.dflex {
+		column-gap: 5px;
+		justify-content: center;
+	}
 	.what-we-do .tabs-content {
 		min-height: 580px;
 	}

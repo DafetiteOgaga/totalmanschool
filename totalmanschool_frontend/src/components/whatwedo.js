@@ -116,7 +116,7 @@ function WhatWeDo() {
 								<article className={`tab-state show`}>
 									<div key={activeTab} className="row swap-animate swap-slide-top">
 										<div
-										className={`col-md-6 ${width>786?'':'p-0'} swap-animate swap-slide-left`}>
+										className={`col-md-6 swap-animate swap-slide-left`}>
 											<img className="b-rad-10px swap-animate swap-slide-left"
 											src={whatWeDoContent[activeTab].image} alt="" />
 										</div>

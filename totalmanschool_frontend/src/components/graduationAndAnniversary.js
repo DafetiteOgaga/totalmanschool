@@ -146,7 +146,7 @@ function GraduationAndAnniversary() {
 						<div className="continer centerIt">
 							<div>
 								<h4 className="animate slide-from-bottom-right">Our {yr.year} <em className="animate slide-from-bottom-left delay-2">GRADUATION</em> and <em className="animate slide-from-bottom-left delay-2">{yr.yearDiff} ANNIVERSARY</em> ceremonies will take place in:</h4>
-								<div className={`counter animate slide-from-bottom-left delay-3 ${width<=450?'d-flex justify-content-center':''}`}>
+								<div className={`counter animate slide-from-bottom-left ${width<=450?'d-flex justify-content-center':''}`}>
 									{timeContext.map((time, tidx) => {
 										return (
 											<div key={tidx} className={`${time} w-auto`}>

@@ -638,6 +638,9 @@ section.why-us {
     margin-top: 60px;
     text-align: left;
 }
+.what-we-do .tabs-content {
+  min-height: 520px;
+}
 
 .tabs-content img {
     width: 100%;

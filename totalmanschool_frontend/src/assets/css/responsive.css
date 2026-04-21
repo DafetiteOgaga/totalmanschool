@@ -45,6 +45,12 @@ RESPONSIVE STYLES (DESKTOP-FIRST FIXED)
 	}
 }
 
+/* ----------- MAX WIDTH: 1300px ----------- */
+@media screen and (max-width: 1300px) {
+	.main-banner .caption h2 {
+		font-size: 45px;
+	}
+}
 
 /* ----------- MAX WIDTH: 1180px ----------- */
 @media screen and (max-width: 1180px) {

@@ -116,7 +116,7 @@ function updateState({setState, setTimeLeft}) {
 const timeContext = [
 	"days", "hours", "minutes", "seconds",
 ]
-function ComingSoon() {
+function GraduationAndAnniversary() {
 	const { label, width } = useDevice()
 	const [state, setState] = useState(() => getTargetState());
 	const [timeLeft, setTimeLeft] = useState(() =>
@@ -139,14 +139,14 @@ function ComingSoon() {
 	const yr = getYearAndDiff()
 	// console.log({yr})
 	return (
-		<section className="ComingSoon section coming-soon" data-section="section3">
+		<section className="GraduationAndAnniversary section coming-soon" data-section="section3">
 			<div className="container">
 				<div className="row justify-content-center">
 					<div className="col-md-7 col-xs-12">
 						<div className="continer centerIt">
 							<div>
-								<h4>Our {yr.year} <em>GRADUATION</em> and <em>{yr.yearDiff} ANNIVERSARY</em> ceremonies will take place in:</h4>
-								<div className={`counter ${width<=450?'d-flex justify-content-center':''}`}>
+								<h4 className="animate slide-from-bottom-right">Our {yr.year} <em className="animate slide-from-bottom-left delay-2">GRADUATION</em> and <em className="animate slide-from-bottom-left delay-2">{yr.yearDiff} ANNIVERSARY</em> ceremonies will take place in:</h4>
+								<div className={`counter animate slide-from-bottom-left delay-3 ${width<=450?'d-flex justify-content-center':''}`}>
 									{timeContext.map((time, tidx) => {
 										return (
 											<div key={tidx} className={`${time} w-auto`}>
@@ -164,4 +164,4 @@ function ComingSoon() {
 		</section>
 	)
 }
-export { ComingSoon }
+export { GraduationAndAnniversary }

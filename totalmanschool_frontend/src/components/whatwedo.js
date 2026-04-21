@@ -91,12 +91,13 @@ function WhatWeDo() {
 	const [activeTab, setActiveTab] = useState(0)
 	const TOTAL_TABS = whatWeDoContent.length-1;
 	const intervalRef = useRef(null);
+	const { label, width } = useDevice()
 
 	const resetInterval = () => {
-		clearInterval(intervalRef.current);
-		intervalRef.current = setInterval(() => {
-			setActiveTab(prev => prev === TOTAL_TABS ? 0 : prev + 1);
-		}, 5000); // 30 seconds
+		// clearInterval(intervalRef.current);
+		// intervalRef.current = setInterval(() => {
+		// 	setActiveTab(prev => prev === TOTAL_TABS ? 0 : prev + 1);
+		// }, 5000); // 30 seconds
 	};
 
 	useEffect(() => {
@@ -113,16 +114,18 @@ function WhatWeDo() {
 						id='tabs'>
 							<section className='tabs-content mt-0'>
 								<article className={`tab-state show`}>
-									<div className="row">
-										<div className="col-md-6">
-											<img className="b-rad-10px"
+									<div key={activeTab} className="row swap-animate swap-slide-top">
+										<div
+										className={`col-md-6 ${width>786?'':'p-0'} swap-animate swap-slide-left`}>
+											<img className="b-rad-10px swap-animate swap-slide-left"
 											src={whatWeDoContent[activeTab].image} alt="" />
 										</div>
-										<div className="col-md-6">
-										<h4>{whatWeDoContent[activeTab].title}</h4>
-										<p className='font-lgr'>
-											{whatWeDoContent[activeTab].description}
-										</p>
+										<div
+										className="col-md-6 swap-animate swap-slide-right">
+											<h4 className="swap-animate swap-slide-bottom">{whatWeDoContent[activeTab].title}</h4>
+											<p className='font-lgr swap-animate swap-slide-top'>
+												{whatWeDoContent[activeTab].description}
+											</p>
 										</div>
 									</div>
 								</article>

@@ -1,7 +1,7 @@
 import { Banner } from "./banner";
 import { Features } from "./fetaures";
 import { WhyChooseUs } from "./whychooseus";
-import { ComingSoon } from "./comingsoon";
+import { GraduationAndAnniversary } from "./graduationAndAnniversary";
 
 function Home() {
 	return (
@@ -9,7 +9,7 @@ function Home() {
 			<Banner />
 			<Features />
 			<WhyChooseUs />
-			<ComingSoon />
+			<GraduationAndAnniversary />
 		</>
 	)
 }

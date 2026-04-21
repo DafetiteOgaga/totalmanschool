@@ -17,9 +17,12 @@
   --headliner: #83a7ce;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
 }
 
 .page-overlay {

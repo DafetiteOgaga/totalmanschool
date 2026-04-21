@@ -37,7 +37,7 @@ function Features() {
 						return (
 							<div key={fidx} className={`col-lg-4 col-12 ${width>900?'':'p-0'}`}>
 								<div className="features-post">
-									<div className="features-content"
+									<div className="features-content animate slide-from-left"
 									onMouseLeave={()=>setIsMoreOpened(null)}
 									>
 										<div className="content-show">

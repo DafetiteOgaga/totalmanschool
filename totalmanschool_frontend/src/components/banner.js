@@ -1,11 +1,19 @@
 import backgroundVideoMP4 from '../assets/images/course-video.mp4'
 // import backgroundVideoWEBM from '../assets/images/course-video.webm'
 import { schoolInfo } from '../entry/entry'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { BadgeOutline } from './appLogo';
-// import logoBadge from '../assets/images/logo_badge.png'
+import { useEffect } from 'react';
 
 function Banner() {
+	// const location = useLocation();
+
+	// useEffect(() => {
+	// 	const observer = new IntersectionObserver(/* ... */);
+	// 	const animatedElements = document.querySelectorAll(".animate");
+	// 	animatedElements.forEach(el => observer.observe(el));
+	// 	return () => observer.disconnect();
+	// }, [location.pathname]);
 	return (
 		<section className="Banner section main-banner" id="top" data-section="section1">
 			<video
@@ -21,14 +29,15 @@ function Banner() {
 
 			<div className="video-overlay header-text">
 				<div className="caption">
-					{/* <img src={logoBadge} alt='logo' /> */}
 					<div className='badge'>
-						<BadgeOutline />
+						<div className='animate slide-from-bottom'>
+							<BadgeOutline />
+						</div>
 					</div>
-					<h6>{schoolInfo.the} {schoolInfo.totalman} {schoolInfo.school}</h6>
-					<h2>Shaping <em>Minds</em>, inspiring <em>Excellence</em> and building <em>Future Leaders</em>.</h2>
+					<h6 className='animate slide-from-bottom'>{schoolInfo.the} {schoolInfo.totalman} {schoolInfo.school}</h6>
+					<h2 className='animate slide-from-top'>Shaping <em className='animate slide-from-bottom delay-2'>Minds</em>, inspiring <em className='animate slide-from-bottom delay-2'>Excellence</em> and building <em className='animate slide-from-bottom delay-2'>Future Leaders</em>.</h2>
 					<div className="main-button">
-						<div className="scroll-to-section"><Link>Discover more</Link></div>
+						<div className="scroll-to-section"><Link className='animate slide-from-right delay-3'>Discover more</Link></div>
 					</div>
 				</div>
 			</div>

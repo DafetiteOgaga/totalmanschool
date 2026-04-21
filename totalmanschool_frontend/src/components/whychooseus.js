@@ -50,7 +50,8 @@ function WhyChooseUs() {
 							<ul>
 								{whyChooseUsArr.map((item, idx)=> {
 									return (
-										<li key={idx} className={`${activeTab===idx?'ui-tabs-active':''}`}>
+										<li key={idx} className={`swap-animate swap-slide-left
+																${activeTab===idx?'ui-tabs-active':''}`}>
 											<Link onClick={()=>setActiveTab(idx)}>
 												{item.title}
 											</Link>
@@ -62,13 +63,14 @@ function WhyChooseUs() {
 								<article className={`tab-state show'}`}>
 									<div className="row">
 										<div className="col-md-6">
-											<img src={whyChooseUsArr[activeTab].image} alt="" />
+											<img className="animate slide-from-bottom-left"
+											src={whyChooseUsArr[activeTab].image} alt="" />
 										</div>
 										<div className="col-md-6">
-										<h4>{whyChooseUsArr[activeTab].title}</h4>
-										<p className='font-lgr'>
-											{whyChooseUsArr[activeTab].para}
-										</p>
+											<h4 className="animate slide-from-bottom-right delay-1">{whyChooseUsArr[activeTab].title}</h4>
+											<p className='font-lgr animate slide-from-bottom-right delay-2'>
+												{whyChooseUsArr[activeTab].para}
+											</p>
 										</div>
 									</div>
 								</article>

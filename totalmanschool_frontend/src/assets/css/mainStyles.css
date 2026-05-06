@@ -95,10 +95,6 @@ p {
   background-color: var(--white) !important;
 }
 
-.z-100 {
-  z-index: 100;
-}
-
 /* logo and name */
 .logo-wrapper {
   display: flex;
@@ -138,6 +134,10 @@ p {
 }
 .section-heading h2.invert:before {
   background-color: var(--white) !important;
+}
+.section-heading h2.why-choose-us:before {
+  height: 50px;
+  top: -52px;
 }
 
 .section-heading h2 {

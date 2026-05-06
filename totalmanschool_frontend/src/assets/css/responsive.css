@@ -371,6 +371,10 @@ screen and (max-height: 300px) {
 	section.what-we-do {
 		padding: 0px 5px 30px 5px;
 	}
+	.section-heading h2.why-choose-us:before {
+		height: 30px;
+		top: -32px;
+	}
 	footer p,
 	footer a {
 		font-size: medium;
@@ -385,7 +389,7 @@ screen and (max-height: 300px) {
         /* white-space: pre; */
     }
     .custom_toast {
-        max-width: 95%;
+        max-width: 90%;
         min-width: 50%;
         width: max-content;
         font-size: 0.8rem;

@@ -7,6 +7,8 @@ import './assets/css/mainStyles.css'
 import './assets/css/responsive.css'
 import './assets/css/owl.css'
 import './assets/css/animations.css'
+import { ToastContainer } from 'react-toastify';
+import { useDevice } from './context/deviceTypeContext';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEye, faEyeSlash, faCircleCheck, faCheck, faTimes,
   faBars, faCopy, faArrowsRotate, faDownload, faGear, faCogs,
@@ -28,6 +30,7 @@ library.add(
 );
 
 function App() {
+  const { label, width, isMobileDev768 } = useDevice()
   const location = useLocation().pathname;
   useEffect(() => {
     const raf = requestAnimationFrame(() => {
@@ -68,6 +71,19 @@ function App() {
   return (
     <>
         <AppRoutes />
+        <ToastContainer
+          toastClassName="custom_toast"
+          position={isMobileDev768?"top-center":"top-right"}
+          autoClose={6000} // 3 seconds (you can increase if needed)
+          // autoClose={false} // 3 seconds (you can increase if needed)
+          hideProgressBar={false}
+          newestOnTop={true}
+          closeOnClick
+          // rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
     </>
   );
 }

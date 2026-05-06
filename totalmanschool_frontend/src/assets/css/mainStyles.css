@@ -907,6 +907,7 @@ footer a {
 footer a {
   display: inline-block;
   transition: transform 0.2s ease;
+  text-decoration: underline;
 }
 footer a:hover {
     transform: scaleX(1.15);

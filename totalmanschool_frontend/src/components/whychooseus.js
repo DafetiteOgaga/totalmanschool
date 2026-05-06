@@ -44,7 +44,10 @@ function WhyChooseUs() {
 		<section className="WhyChooseUs section why-us" data-section="section2">
 			<div className="container _1300">
 				<div className="row">
-					<HangingHeader headerText={`Why ${titleCase(schoolInfo.totalman)} ${titleCase(schoolInfo.school)}?`} />
+					<HangingHeader
+					reduceMarginLine={true}
+					headerText={`Why ${titleCase(schoolInfo.totalman)} ${titleCase(schoolInfo.school)}?`}
+					/>
 					<div className="col-md-12">
 						<div id='tabs'>
 							<ul>

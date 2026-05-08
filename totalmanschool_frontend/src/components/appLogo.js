@@ -13,15 +13,11 @@ const styles = {
 	fill: "#1f5a99",
 }
 
-// function AppLogo() {
-// 	const { labe, width } = useDevice()
-// 	return (
-		
-// 	);
-// }
-
 function SchoolLogo() {
 	const { labe, width } = useDevice()
+	// if (width <= 375) {
+	// 	styles = {...styles, fontSize: "38px"}
+	// }
 	return (
 		<div className="logo-wrapper">
 			<svg

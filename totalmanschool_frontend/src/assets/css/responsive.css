@@ -291,9 +291,9 @@ screen and (max-height: 300px) {
 		padding-right: 0 !important;
 	}
 
-	.main-header .logo {
+	/* .main-header .logo {
 		line-height: 73px;
-	}
+	} */
 
 	.main-menu li {
 		display: block;
@@ -448,6 +448,22 @@ screen and (max-height: 300px) {
 }
 
 /* even smallest devices */
+@media screen and (max-width: 375px) {
+	.main-header .logo {
+        padding-left: 15px !important;
+    }
+	section.why-us .wcu {
+		padding-right: 8px !important;
+		padding-left: 8px !important;
+	}
+	.main-banner {
+		margin-top: 50px !important;
+	}
+	#tabs ul.dflex {
+		column-gap: 3px;
+	}
+}
+
 @media screen and (max-width: 370px) {
 	/* .badge-svg {
         width: 35px;

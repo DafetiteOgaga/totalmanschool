@@ -48,7 +48,7 @@ function WhyChooseUs() {
 					reduceMarginLine={true}
 					headerText={`Why ${titleCase(schoolInfo.totalman)} ${titleCase(schoolInfo.school)}?`}
 					/>
-					<div className="col-md-12">
+					<div className="col-md-12 wcu">
 						<div id='tabs'>
 							<ul>
 								{whyChooseUsArr.map((item, idx)=> {

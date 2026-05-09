@@ -173,7 +173,7 @@ function SchoolLogo() {
 					width>450?'350':
 					width>400? '300':
 					'250'}`}
-			height="120"
+			height="100"
 			viewBox="0 0 600 120"
 			className="text-svg"
 			>

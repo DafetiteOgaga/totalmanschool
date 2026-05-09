@@ -144,19 +144,12 @@ RESPONSIVE STYLES (DESKTOP-FIRST FIXED)
 
 /* ----------- MAX WIDTH: 900px ----------- */
 @media all and (max-width: 900px) {
-	/* .mfp-arrow {
-		transform: scale(0.75);
-	}
-	.mfp-arrow-left {
-		transform-origin: 0;
-	}
-	.mfp-arrow-right {
-		transform-origin: 100%;
-	}
-	.mfp-container {
-		padding-left: 6px;
-		padding-right: 6px;
-	} */
+	.main-header .logo {
+        padding-left: 10px !important;
+    }
+	.main-menu {
+        padding-right: 10px !important;
+    }
 	.badge-svg {
 		width: 75px;
 	}
@@ -457,7 +450,7 @@ screen and (max-height: 300px) {
 		padding-left: 8px !important;
 	}
 	.main-banner {
-		margin-top: 50px !important;
+		margin-top: 30px !important;
 	}
 	#tabs ul.dflex {
 		column-gap: 3px;
@@ -465,9 +458,9 @@ screen and (max-height: 300px) {
 }
 
 @media screen and (max-width: 370px) {
-	/* .badge-svg {
-        width: 35px;
-    } */
+	.main-header .logo {
+        padding-left: 8px !important;
+    }
 	.text-svg {
         width: 215px;
     }
